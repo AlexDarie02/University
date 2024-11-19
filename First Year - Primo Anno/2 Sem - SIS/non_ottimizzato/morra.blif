@@ -1,0 +1,11 @@
+.model MORRACINESE
+.inputs p1 p2 s1 s2 r
+.outputs m1 m2 pa1 pa2
+
+.subckt CONTROLLO inz=r m1=m1 m2=m2 MM=mob MF=mfi p1=pa1 p2=pa2
+.subckt DATAPATH p1=p1 p2=p2 s1=s1 s2=s2 inz=r mo1=m1 mo2=m2 MM=mob MF=mfi
+
+
+.search datapath.blif
+.search controllo.blif
+.end

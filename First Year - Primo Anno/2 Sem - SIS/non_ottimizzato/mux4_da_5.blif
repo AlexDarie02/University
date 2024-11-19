@@ -1,0 +1,13 @@
+.model MUX4da5
+.inputs a1 a2 a3 a4 a5 b1 b2 b3 b4 b5 c1 c2 c3 c4 c5 d1 d2 d3 d4 d5 ctr1 ctr2
+.outputs o1 o2 o3 o4 o5
+
+.subckt MUX4da1 a=a1 b=b1 c=c1 d=d1 ctr1=ctr1 ctr2=ctr2 o=o1
+.subckt MUX4da1 a=a2 b=b2 c=c2 d=d2 ctr1=ctr1 ctr2=ctr2 o=o2
+.subckt MUX4da1 a=a3 b=b3 c=c3 d=d3 ctr1=ctr1 ctr2=ctr2 o=o3
+.subckt MUX4da1 a=a4 b=b4 c=c4 d=d4 ctr1=ctr1 ctr2=ctr2 o=o4
+.subckt MUX4da1 a=a5 b=b5 c=c5 d=d5 ctr1=ctr1 ctr2=ctr2 o=o5
+
+
+.search mux4_da_1.blif
+.end

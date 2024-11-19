@@ -1,0 +1,7 @@
+.model CONST1
+.outputs o
+
+.names o
+1
+
+.end

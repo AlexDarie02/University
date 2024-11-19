@@ -1,0 +1,131 @@
+.model CONTROLLO
+.inputs inz m1 m2 MM MF
+.outputs p1 p2
+.latch    [14] LatchOut_v5   0
+.latch    [15] LatchOut_v6   0
+.latch    [16] LatchOut_v7   1
+.start_kiss
+.i 5
+.o 2
+.p 50
+.s 8
+.r START
+1---- START START 00
+010-0 START S1 00
+001-0 START P1 00
+000-0 START START 00
+011-0 START START 00
+0---1 START PAR 11
+0100- S1 S2 00
+1---- S1 START 00
+001-0 S1 START 00
+001-1 S1 PAR 11
+0101- S1 SV 10
+011-0 S1 S1 00
+011-1 S1 PAR 11
+000-- S1 S1 00
+1---- P1 START 00
+010-0 P1 START 00
+010-1 P1 PAR 11
+0010- P1 P2 00
+0011- P1 PV 01
+011-0 P1 P1 00
+011-1 P1 PAR 11
+000-- P1 P1 00
+0---- PAR PAR 11
+1---- PAR START 00
+001-0 S2 S1 00
+1---- S2 START 00
+0100- S2 SV 00
+0101- S2 SV 10
+001-1 S2 PAR 11
+000-- S2 S2 00
+0110- S2 S2 00
+0111- S2 SV 10
+1---- SV START 00
+000-- SV SV 00
+010-- SV SV 10
+001-- SV SV 10
+011-- SV SV 10
+010-0 P2 P1 00
+1---- P2 START 00
+0010- P2 PV 00
+0011- P2 PV 01
+010-1 P2 PAR 11
+000-- P2 P2 00
+0110- P2 P2 00
+0111- P2 PV 01
+000-- PV PV 00
+010-- PV PV 01
+001-- PV PV 01
+011-- PV PV 01
+1---- PV START 00
+.end_kiss
+.latch_order LatchOut_v5 LatchOut_v6 LatchOut_v7
+.code START 001
+.code S1 000
+.code P1 010
+.code PAR 011
+.code S2 100
+.code SV 101
+.code P2 110
+.code PV 111
+.names inz m1 m2 LatchOut_v5 LatchOut_v6 LatchOut_v7 [14]
+0111-- 1
+0001-- 1
+00111- 1
+01-111 1
+01-101 1
+0-1101 1
+001-10 1
+010-00 1
+.names inz m1 m2 MF LatchOut_v5 LatchOut_v6 LatchOut_v7 [15]
+00---1- 1
+0-1--1- 1
+0---11- 1
+0--10-1 1
+0---011 1
+01110-- 1
+001-0-1 1
+0101-10 1
+0011-00 1
+.names inz m1 m2 MM MF LatchOut_v5 LatchOut_v6 LatchOut_v7 [16]
+1------- 1
+-11----1 1
+-00----1 1
+-10--01- 1
+-10--10- 1
+0---10-1 1
+0----011 1
+011-10-- 1
+0011--1- 1
+001--11- 1
+0-11-11- 1
+01-1-10- 1
+01---111 1
+0-1--101 1
+-01--000 1
+010-1-10 1
+0101--00 1
+001-1-00 1
+.names inz m1 m2 MM MF LatchOut_v5 LatchOut_v6 LatchOut_v7 p1
+0---10-1 1
+0----011 1
+011-10-- 1
+01-1-10- 1
+01---101 1
+0-1--101 1
+010-1-10 1
+0101--00 1
+001-1-00 1
+.names inz m1 m2 MM MF LatchOut_v5 LatchOut_v6 LatchOut_v7 p2
+0---10-1 1
+0-1---11 1
+0----011 1
+011-10-- 1
+0011--1- 1
+0-11-11- 1
+01---111 1
+010-1-10 1
+001-1-00 1
+.end

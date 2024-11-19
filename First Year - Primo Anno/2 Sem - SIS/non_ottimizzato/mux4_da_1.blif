@@ -1,0 +1,11 @@
+.model MUX4da1
+.inputs a b c d ctr1 ctr2
+.outputs o
+
+.names a b c d ctr1 ctr2 o
+1---00 1
+-1--01 1
+--1-10 1
+---111 1
+
+.end

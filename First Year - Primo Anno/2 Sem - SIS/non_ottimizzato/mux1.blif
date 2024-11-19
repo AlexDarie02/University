@@ -1,0 +1,9 @@
+.model MUX_1B
+.inputs a b ctr
+.outputs o
+
+.names a b ctr o
+1-0 1
+-11 1
+
+.end

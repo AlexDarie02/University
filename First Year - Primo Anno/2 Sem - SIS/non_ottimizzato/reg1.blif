@@ -1,0 +1,7 @@
+.model REG
+.inputs i
+.outputs o
+
+.latch i o re NIL 0
+
+.end

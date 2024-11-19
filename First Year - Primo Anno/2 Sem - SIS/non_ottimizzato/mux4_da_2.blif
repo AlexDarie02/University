@@ -1,0 +1,9 @@
+.model MUX4da2
+.inputs a1 a2 b1 b2 c1 c2 d1 d2 ctr1 ctr2
+.outputs o1 o2
+
+.subckt MUX4da1 a=a1 b=b1 c=c1 d=d1 ctr1=ctr1 ctr2=ctr2 o=o1
+.subckt MUX4da1 a=a2 b=b2 c=c2 d=d2 ctr1=ctr1 ctr2=ctr2 o=o2
+
+.search mux4_da_1.blif
+.end

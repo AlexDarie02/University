@@ -1,0 +1,13 @@
+.model UGUALE_2B
+.inputs a1 a2 b1 b2
+.outputs o
+
+.subckt UGUALE_1B a=a1 b=b1 o=c1
+.subckt UGUALE_1B a=a2 b=b2 o=c2
+
+.names c1 c2 o
+11 1
+
+.search uguale1.blif
+
+.end

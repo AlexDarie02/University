@@ -1,0 +1,18 @@
+.model demux # un'entrata da due bit e due uscite da 2 bit
+.inputs a b in
+.outputs x1 x2 y1 y2
+
+.names a b in x1
+1-1 1
+
+.names a b in x2
+-11 1
+
+.names a b in y1
+1-0 1
+
+.names a b in y2
+-10 1
+
+.end
+

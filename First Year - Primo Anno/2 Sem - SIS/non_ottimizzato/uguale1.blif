@@ -1,0 +1,8 @@
+.model UGUALE_1B
+.inputs a b
+.outputs o
+.names a b o
+11 1
+00 1
+
+.end

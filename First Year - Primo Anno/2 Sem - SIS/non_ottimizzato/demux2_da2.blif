@@ -1,0 +1,9 @@
+.model demux2_da2 # un'entrata da due bit e due uscite da 2 bit ciascuna
+.inputs a1 a2 in
+.outputs o1 o2 
+
+.subckt demux a=a1 in=in x=o1 
+.subckt demux a=a2 in=in x=o 
+
+.search demux.blif
+.end

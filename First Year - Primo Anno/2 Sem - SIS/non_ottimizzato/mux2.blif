@@ -1,0 +1,10 @@
+.model MUX_2B
+.inputs a1 a2 b1 b2 ctr
+.outputs o1 o2
+
+.subckt MUX_1B a=a1 b=b1 ctr=ctr o=o1
+.subckt MUX_1B a=a2 b=b2 ctr=ctr o=o2
+
+
+.search mux1.blif
+.end

@@ -1,0 +1,169 @@
+.model MORRACINESE
+.inputs p1 p2 s1 s2 r
+.outputs m1 m2 pa1 pa2
+.latch    [14] LatchOut_v5   0
+.latch    [15] LatchOut_v6   0
+.latch    [16] LatchOut_v7   1
+.latch    d1 cmp1 re NIL 0
+.latch    d2 cmp2 re NIL 0
+.latch    d3 cmp3 re NIL 0
+.latch    d4 cmp4 re NIL 0
+.latch    d5 cmp5 re NIL 0
+.latch    muxt1 rt1 re NIL 0
+.latch    muxt2 rt2 re NIL 0
+.latch    muxt3 rt3 re NIL 0
+.latch    muxt4 rt4 re NIL 0
+.latch    muxt5 rt5 re NIL 0
+.latch    wrp1 rp1 re NIL 0
+.latch    wrp2 rp2 re NIL 0
+.latch    wrs1 rs1 re NIL 0
+.latch    wrs2 rs2 re NIL 0
+.names r [160] m1
+01 1
+.names r [162] m2
+01 1
+.names m1 pa2 [14] [15] [16] [308] [312] [317] pa1
+-10----- 1
+1-----01 1
+--10111- 1
+.names m1 LatchOut_v7 [14] [15] [16] [317] [318] pa2
+-1----1 1
+-----11 1
+1--11-- 1
+--011-- 1
+.names r d3 d4 d5 [49] rt3 rt4 rt5 mfi
+01111111 1
+00111011 1
+01011101 1
+00011001 1
+01101110 1
+00101010 1
+01001100 1
+00001000 1
+.names r LatchOut_v5 LatchOut_v6 LatchOut_v7 [307] [308] [312] [318] [14]
+01--1--- 1
+-1-1-1-- 1
+--0-0-0- 1
+---00--1 1
+.names r m1 mfi LatchOut_v5 LatchOut_v6 LatchOut_v7 [14] [308] [312] [15]
+--1-1---- 1
+-1-11---- 1
+0---1--0- 1
+--1---0-1 1
+----1--11 1
+-0---101- 1
+.names r m2 mfi LatchOut_v5 LatchOut_v6 LatchOut_v7 [14] [15] [307] [308] \
+[317] [16]
+1---------- 1
+-----1--1-- 1
+---------11 1
+---1--1-0-- 1
+--1---0--1- 1
+---01-0-0-- 1
+-1-0---00-- 1
+.names p1 s1 [162] ugu [309] [313] [314] [316] [160]
+--1--11- 1
+1---1--1 1
+-0---0-1 1
+-100-0-- 1
+.names p1 p2 s1 s2 r ugu [309] [316] [162]
+----1--- 1
+-1----11 1
+-0----01 1
+1-10-0-- 1
+.names r d2 cmp1 cmp2 d1
+-11- 1
+0-10 1
+0001 1
+.names r d3 cmp2 cmp3 d2
+-11- 1
+0-10 1
+0001 1
+.names r cmp3 [315] d3
+011 1
+000 1
+.names r cmp4 [310] [315] d4
+01-1 1
+0-01 1
+.names r mv cmp5 d5
+-11 1
+000 1
+.names p1 s1 rp1 rp2 rs1 rs2 [313] [314] ugu
+1-10--1- 1
+0-00--1- 1
+1-11--0- 1
+0-01--0- 1
+-1--10-1 1
+-0--00-1 1
+-1--11-0 1
+-0--01-0 1
+.names p1 [160] rp1 mv wrp1
+--11 1
+10-0 1
+.names p2 [160] rp2 mv wrp2
+--11 1
+10-0 1
+.names s1 [162] rs1 mv wrs1
+--11 1
+10-0 1
+.names s2 [162] rs2 mv wrs2
+--11 1
+10-0 1
+.names [160] [162] mv
+00 1
+.names d1 d2 rt1 rt2 [302] [49]
+--000 1
+1111- 1
+0101- 1
+1010- 1
+.names p1 p2 r rt1 muxt1
+--01 1
+111- 1
+.names p1 p2 r rt2 muxt2
+--01 1
+011- 1
+101- 1
+.names p2 r rt3 muxt3
+01- 1
+-01 1
+.names s1 r rt4 muxt4
+11- 1
+-01 1
+.names s2 r rt5 muxt5
+11- 1
+-01 1
+.names d1 d2 [302]
+1- 1
+-1 1
+.names m1 m2 [308] [307]
+--0 1
+11- 1
+.names m1 m2 [308]
+1- 1
+-1 1
+.names p1 s1 [309]
+0- 1
+-1 1
+.names mv cmp5 [310]
+1- 1
+-0 1
+.names m2 LatchOut_v7 [312]
+1- 1
+-1 1
+.names p2 r [313]
+0- 1
+-1 1
+.names s2 r [314]
+0- 1
+-1 1
+.names cmp4 [310] [315]
+0- 1
+-1 1
+.names s2 ugu [316]
+10 1
+.names [14] d3 [302] [317]
+11- 1
+1-1 1
+.names m2 LatchOut_v6 [318]
+11 1
+.end

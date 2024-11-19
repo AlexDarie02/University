@@ -1,0 +1,10 @@
+.model sommatore2
+.inputs A1 A0 B1 B0 CIN
+.outputs O1 O2 COUT
+
+.subckt sommatore A=A0 B=B0 CIN=CIN O=O0 COUT=CO
+.subckt sommatore A=A1 B=B1 CIN=CO O=O1 COUT=COUT
+
+.search sommatore.blif
+
+.end

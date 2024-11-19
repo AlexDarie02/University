@@ -1,0 +1,82 @@
+.model DATAPATH
+.inputs p1 p2 s1 s2 inz
+.outputs mo1 mo2 MM MF
+
+.subckt CV p1=dp1 p2=dp2 s1=ds1 s2=ds2 inv=ugu rst=inz m1=m1 m2=m2
+.subckt UGUALE_2B a1=dp1 a2=dp2 b1=rp1 b2=rp2 o=up
+.subckt UGUALE_2B a1=ds1 a2=ds2 b1=rs1 b2=rs2 o=us
+.subckt OR a=up b=us o=ugu
+.subckt CONST0 o=zr
+.subckt MUX4da2 a1=rp1 a2=rp2 b1=p1 b2=p2 c1=zr c2=zr d1=zr d2=zr ctr1=m1 ctr2=m2 o1=wrp1 o2=wrp2
+.subckt MUX4da2 a1=rs1 a2=rs2 b1=zr b2=zr c1=s1 c2=s2 d1=zr d2=zr ctr1=m1 ctr2=m2 o1=wrs1 o2=wrs2
+.subckt REG2 i1=wrp1 i2=wrp2 o1=rp1 o2=rp2
+.subckt REG2 i1=wrs1 i2=wrs2 o1=rs1 o2=rs2
+
+.subckt MUX_2B a1=m1 a2=m2 b1=zr b2=zr ctr=inz o1=mo1 o2=mo2
+
+# uguale tra manche del cv e costante 0, da in output se la manche è valida o meno (mv)
+.subckt UGUALE_2B a1=m1 a2=m2 b1=zr b2=zr o=mv 
+
+# mux, se ctr ,che prende mv, è 1 prende registro cmp non incrementato, se ctr è 0 prende cmp incrementato (incr)
+.subckt MUX_2_da5 a1=incr1 a2=incr2 a3=incr3 a4=incr4 a5=incr5 b1=cmp1 b2=cmp2 b3=cmp3 b4=cmp4 b5=cmp5 ctr=mv o1=c1 o2=c2 o3=c3 o4=c4 o5=c5
+
+# mux, se inizia è a 0 prende l'output del mux prima, se a 1 prende la costante di 5 bit di 0
+.subckt MUX_2_da5 a1=c1 a2=c2 a3=c3 a4=c4 a5=c5 b1=zr b2=zr b3=zr b4=zr b5=zr ctr=inz o1=d1 o2=d2 o3=d3 o4=d4 o5=d5
+
+# registro cmp (manche completate)
+.subckt REG5 i1=d1 i2=d2 i3=d3 i4=d4 i5=d5 o1=cmp1 o2=cmp2 o3=cmp3 o4=cmp4 o5=cmp5
+
+# uguale, prende manche totali (del registro tot, rt) e le confronta a quelle completate, da in output se le manche massime sono finite o meno
+.subckt UGUALE_5B a1=rt1 a2=rt2 a3=rt3 a4=rt4 a5=rt5 b1=d1 b2=d2 b3=d3 b4=d4 b5=d5 o=tMF
+.subckt MUX_1B a=tMF b=zr ctr=inz o=MF
+
+.subckt CONST1 o=uno
+
+# maggiore o uguale, prende cmp e lo confronta con la costante 00011, dà in output se le manche minime sono finite o meno
+.subckt maggiore_5 A1=d1 A2=d2 A3=d3 A4=d4 A5=d5 B1=zr B2=zr B3=zr B4=uno B5=uno O=MM
+
+# registro totale, prene in input il risultato tra la somma di 00100 e il registro psc (quindi psc aumentato)
+.subckt REG5 i1=muxt1 i2=muxt2 i3=muxt3 i4=muxt4 i5=muxt5 o1=rt1 o2=rt2 o3=rt3 o4=rt4 o5=rt5
+
+# sommatore, prende 1 0 0 0 0 in input il registro cmp e la costante 00001, li somma e dà output il registro cmp incrementato (incr)
+.subckt sommatore5 A1=cmp1 A2=cmp2 A3=cmp3 A4=cmp4 A5=cmp5 B1=zr B2=zr B3=zr B4=zr B5=uno CIN=zr O1=incr1 O2=incr2 O3=incr3 O4=incr4 O5=incr5 COUT=COUT1
+
+.subckt MUX_2_da5 a1=rt1 a2=rt2 a3=rt3 a4=rt4 a5=rt5 b1=psca1 b2=psca2 b3=psca3 b4=psca4 b5=psca5 ctr=inz o1=muxt1 o2=muxt2 o3=muxt3 o4=muxt4 o5=muxt5
+
+# sommatore tra gli input dei giocatori
+.subckt sommatore5 A1=si1 A2=si2 A3=si3 A4=si4 A5=si5 B1=zr B2=zr B3=uno B4=zr B5=zr CIN=zr O1=psca1 O2=psca2 O3=psca3 O4=psca4 O5=psca5 COUT=COUT2
+
+# sommatore manche max
+.subckt sommatore5 A1=ipri1 A2=ipri2 A3=ipri3 A4=ipri4 A5=ipri5 B1=isec1 B2=isec2 B3=isec3 B4=isec4 B5=isec5 CIN=zr O1=si1 O2=si2 O3=si3 O4=si4 O5=si5 
+
+#multiplexer giocatore uno  
+.subckt MUX4da5 a1=zr a2=zr a3=zr a4=zr a5=zr b1=zr b2=zr b3=uno b4=zr b5=zr c1=zr c2=uno c3=zr c4=zr c5=zr d1=zr d2=uno d3=uno d4=zr d5=zr ctr1=uscp1 ctr2=uscp2 o1=ipri1 o2=ipri2 o3=ipri3 o4=ipri4 o5=ipri5
+
+#multiplexer giocatore due
+.subckt MUX4da5 a1=zr a2=zr a3=zr a4=zr a5=zr b1=zr b2=zr b3=zr b4=zr b5=uno c1=zr c2=zr c3=zr c4=uno c5=zr d1=zr d2=zr d3=zr d4=uno d5=uno ctr1=uscs1 ctr2=uscs2 o1=isec1 o2=isec2 o3=isec3 o4=isec4 o5=isec5
+
+#demux giocatore uno
+.subckt demux a=p1 b=p2 in=inz x1=uscp1 x2=uscp2 y1=dp1 y2=dp2
+
+#demux giocatore due
+.subckt demux a=s1 b=s2 in=inz x1=uscs1 x2=uscs2 y1=ds1 y2=ds2
+
+
+.search or.blif
+.search cv.blif
+.search uguale2.blif
+.search const0.blif
+.search mux4_da_2.blif
+.search reg5.blif
+.search reg2.blif
+.search maggiore5.blif
+.search somm_5.blif
+.search mux4_da_5.blif
+.search demux.blif
+.search mux2_da_5.blif
+.search uguale5.blif
+.search const1.blif
+.search mux1.blif
+.search mux2.blif
+
+.end
