@@ -2,7 +2,7 @@ ___Section under development___
 
 # University
 I created this repository to organize the projects I worked on during my Bachelor's Degree. <br/>
-Many,if not all, of these projects were collaborative with university colleagues, who are properly credited in each project.  
+Many, if not all, of these projects were collaborative with university colleagues, who are properly credited in each project.  
 
 Over time, I've started improving my approach to maintaining clarity and structure in project development so I'm sorry in advance if they're messy.
 
