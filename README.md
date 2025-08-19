@@ -28,7 +28,7 @@ Over time, I've started improving my approach to maintaining clarity and structu
     <br/>
   　- MediGlyk<br/>
     
-  - Sistemi Operativi<!--:
+  <!-- - Operating Systems/Sistemi Operativi:
     <br/>
   　- SIS<br/>
   　- ASM-->
