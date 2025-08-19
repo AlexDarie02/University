@@ -11,7 +11,7 @@ Over time, I've started improving my approach to maintaining clarity and structu
   <summary>First year (2023/2024)</summary>
 
 
-  - Architettura degli Elaboratori:
+  - Computer Architecture/Architettura degli Elaboratori:
     <br/>
   　- SIS<br/>
   　- ASM
@@ -24,7 +24,10 @@ Over time, I've started improving my approach to maintaining clarity and structu
 <details>
   <summary>Second year (2024/2025)</summary>
 
-
+  - Software Engineering/Ing. Del Software:
+    <br/>
+  　- MediGlyk<br/>
+    
   - Sistemi Operativi<!--:
     <br/>
   　- SIS<br/>
