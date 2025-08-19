@@ -24,8 +24,6 @@ Con il tempo ho iniziato a migliorare il mio metodo per organizzare e strutturar
   　- SIS<br/>
   　- ASM
 
-<br/>
-
 </details>
 
 
@@ -41,7 +39,6 @@ Con il tempo ho iniziato a migliorare il mio metodo per organizzare e strutturar
   　- SIS<br/>
   　- ASM-->
 
-<br/>
 
 </details>
 
