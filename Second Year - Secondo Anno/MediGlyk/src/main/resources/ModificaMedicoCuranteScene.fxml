@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="15" style="-fx-padding: 20; -fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mcv.control.ModificaMedicoCuranteController">
+
+    <Label text="Modifica Medico Curante" textFill="black">
+        <font>
+            <Font name="Arial" size="16" />
+        </font>
+    </Label>
+
+    <Label text="Codice Fiscale Paziente:" textFill="black">
+        <font>
+            <Font name="Arial" size="12" />
+        </font>
+    </Label>
+    <TextField fx:id="cfPazienteField" prefWidth="250" />
+
+    <ListView fx:id="suggerimentiPaziente" prefHeight="80" prefWidth="250" style="-fx-background-color: white; -fx-border-color: #ccc;" />
+
+    <Label text="Codice Fiscale Medico:" textFill="black">
+        <font>
+            <Font name="Arial" size="12" />
+        </font>
+    </Label>
+    <TextField fx:id="cfMedicoField" prefWidth="250" />
+
+    <ListView fx:id="suggerimentiMedico" prefHeight="80" prefWidth="250" style="-fx-background-color: white; -fx-border-color: #ccc;" />
+
+    <Button onAction="#handleAggiorna" prefWidth="220" style="-fx-background-color: #4B788F; -fx-text-fill: white;" text="Aggiorna Medico Curante">
+        <font>
+            <Font name="Arial" size="14" />
+        </font>
+    </Button>
+</VBox>

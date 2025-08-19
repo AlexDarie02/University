@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600" prefWidth="900" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mcv.control.PrescrizioniController">
+
+    <!-- Logo e titolo -->
+    <top>
+        <VBox spacing="5" style="-fx-padding: 10 10 0 10;">
+            <HBox alignment="CENTER_LEFT">
+                <ImageView fitHeight="74.0" fitWidth="150.0" preserveRatio="true">
+                    <image><Image url="@logo.jpeg" /></image>
+                </ImageView>
+            </HBox>
+            <HBox alignment="CENTER">
+                <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-font-family: Arial;" text="Prescrizioni / Terapie Extra" />
+            </HBox>
+            <Separator />
+        </VBox>
+    </top>
+
+    <!-- Parte centrale -->
+    <center>
+        <VBox alignment="TOP_LEFT" spacing="15" style="-fx-padding: 20;">
+
+            <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-font-family: Arial;" text="Prescrizioni" />
+
+            <TableView fx:id="prescrizioniTable" focusTraversable="false" prefHeight="300" prefWidth="850" style="-fx-border-color: transparent; -fx-background-color: #F3F3F1; -fx-padding: 0; -fx-font-family: Arial;">
+                <columns>
+                    <TableColumn fx:id="farmacoColumn" prefWidth="200" text="Farmaco" />
+                    <TableColumn fx:id="dosaggioColumn" prefWidth="150" text="Dosaggio (mg)" />
+                    <TableColumn fx:id="frequenzaColumn" prefWidth="150" text="Frequenza" />
+                    <TableColumn fx:id="dataColumn" prefWidth="180" text="Data Prescrizione" />
+                </columns>
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                </columnResizePolicy>
+            </TableView>
+
+            <!-- Area terapia extra -->
+            <VBox spacing="10" style="-fx-background-color: transparent; -fx-padding: 0;">
+                <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-font-family: Arial;" text="Terapie Extra" />
+
+                <HBox spacing="15">
+                    <ListView fx:id="terapieExtraListView" focusTraversable="false" prefHeight="140" prefWidth="700" style="-fx-background-insets: 0;
+                    -fx-background-color: #F3F3F1;
+                     -fx-control-inner-background: #F3F3F1;
+                     -fx-selection-bar: #CCE5FF;
+                     -fx-selection-bar-non-focused: #E6F2FF;
+                     -fx-font-family: Arial;" />
+
+                    <Button fx:id="eliminaTerapiaButton" alignment="CENTER" contentDisplay="CENTER" onAction="#handleEliminaTerapiaExtra" prefHeight="40" prefWidth="180" style="-fx-background-color: #D9534F;                                    -fx-text-fill: white;                                    -fx-font-weight: bold;                                    -fx-font-family: Arial;" text="Elimina Terapia">
+                        <HBox.margin>
+                            <Insets left="10.0" top="45.0" />
+                        </HBox.margin>
+                    </Button>
+                </HBox>
+            </VBox>
+        </VBox>
+    </center>
+
+    <!-- Bottone indietro -->
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" style="-fx-padding: 10 20 10 10;">
+            <Button fx:id="indietroButton" onAction="#handleBack" style="-fx-background-color: #4B788F;                            -fx-text-fill: white;                            -fx-focus-color: transparent;                            -fx-faint-focus-color: transparent;                            -fx-font-family: Arial;" text="Indietro">
+                <font>
+                    <Font name="Arial" size="13" />
+                </font>
+            </Button>
+        </HBox>
+    </bottom>
+</BorderPane>

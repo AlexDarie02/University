@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600" prefWidth="900" style="-fx-background-color: white; -fx-font-family: 'Arial';" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mcv.control.DettagliPazienteController">
+
+    <!-- Logo -->
+    <top>
+        <VBox spacing="5" style="-fx-padding: 10 10 0 10;">
+            <ImageView fitHeight="74" fitWidth="150" preserveRatio="true">
+                <image>
+                    <Image url="@logo.jpeg" />
+                </image>
+            </ImageView>
+            <Separator />
+        </VBox>
+    </top>
+
+    <!-- Parte centrale -->
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20;">
+            <HBox spacing="40" style="-fx-pref-height: 250;">
+                <!-- Dati Paziente -->
+                <GridPane hgap="15" prefWidth="562" style="-fx-border-color: #ccc; -fx-padding: 15; -fx-border-radius: 5;" vgap="12">
+
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" />
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="300" />
+                    </columnConstraints>
+
+                    <rowConstraints>
+                        <RowConstraints /><RowConstraints /><RowConstraints />
+                        <RowConstraints /><RowConstraints /><RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+
+                    <Label style="-fx-font-weight: bold;" text="Paziente:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <Label fx:id="nomePazienteLabel" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <Label style="-fx-font-weight: bold;" text="Codice Fiscale:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <Label fx:id="cfPazienteLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <Label style="-fx-font-weight: bold;" text="Data di Nascita:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <Label fx:id="dataNascitaLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <Label style="-fx-font-weight: bold;" text="Genere:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                    <Label fx:id="generePazienteLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                    <Label style="-fx-font-weight: bold;" text="Terapie Extra:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                    <Label fx:id="ulterInfoPazienteLabel" maxWidth="355" prefWidth="355" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                    <Label maxWidth="-Infinity" style="-fx-font-weight: bold;" text="Sintomi Segnalati:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                    <Label fx:id="sintomiSegnalatiLabel" maxWidth="355" prefWidth="355" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                    <Label style="-fx-font-weight: bold;" text="Medico:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                    <Label fx:id="medicoLabel" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                </GridPane>
+
+                <VBox alignment="CENTER" prefWidth="354" spacing="25">
+                    <Button fx:id="btnInserisciPrescrizione" onAction="#apriPrescrizioni" prefHeight="38" prefWidth="308" style="-fx-background-color: #4B788F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14;" text="Inserisci Prescrizione" />
+                    <Button fx:id="btnFattoriRischio" onAction="#apriFattoriRischio" prefHeight="38" prefWidth="308" style="-fx-background-color: #4B788F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14;" text="Fattori di Rischio" />
+                </VBox>
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="10" style="-fx-padding: 10 0 10 0;">
+                <Label style="-fx-font-weight: bold;" text="Periodo:" />
+                <ComboBox fx:id="periodoComboBox" prefWidth="150" />
+            </HBox>
+
+            <!-- Grafici -->
+            <HBox spacing="30" style="-fx-padding: 0 10 10 10;">
+                <VBox spacing="10" style="-fx-background-color: white; -fx-padding: 10;" HBox.hgrow="ALWAYS">
+                    <Label style="-fx-font-weight: bold;" text="Andamento Glicemia" />
+                    <LineChart fx:id="glicemiaChart" prefHeight="320" prefWidth="400">
+                        <xAxis><CategoryAxis /></xAxis>
+                        <yAxis><NumberAxis /></yAxis>
+                    </LineChart>
+                </VBox>
+
+                <VBox spacing="10" style="-fx-background-color: white; -fx-padding: 10;" HBox.hgrow="ALWAYS">
+                    <Label style="-fx-font-weight: bold;" text="Assunzione Insulina" />
+                    <LineChart fx:id="insulinaChart" prefHeight="320" prefWidth="400">
+                        <xAxis><CategoryAxis /></xAxis>
+                        <yAxis><NumberAxis /></yAxis>
+                    </LineChart>
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+
+    <!-- Bottone indietro -->
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" style="-fx-padding: 10 20 10 10;">
+            <Button fx:id="indietroButton" onAction="#handleBack" prefHeight="30" prefWidth="100" style="-fx-background-color: #4B788F; -fx-text-fill: white;" text="Indietro" />
+        </HBox>
+    </bottom>
+</BorderPane>

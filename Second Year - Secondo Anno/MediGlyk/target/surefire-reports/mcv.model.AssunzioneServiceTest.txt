@@ -1,0 +1,148 @@
+-------------------------------------------------------------------------------
+Test set: mcv.model.AssunzioneServiceTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.472 s <<< FAILURE! - in mcv.model.AssunzioneServiceTest
+mcv.model.AssunzioneServiceTest.testSalvaAssunzioneChiamaDAO  Time elapsed: 0.435 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class diabetici.dao.AssunzioneDAO.
+
+If you're not sure why you're getting this error, please open an issue on GitHub.
+
+
+Java               : 23
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 23+37-2369
+JVM name           : Java HotSpot(TM) 64-Bit Server VM
+JVM version        : 23+37-2369
+JVM info           : mixed mode, sharing
+OS name            : Mac OS X
+OS version         : 15.5
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class diabetici.dao.AssunzioneDAO]
+	at mcv.model.AssunzioneServiceTest.setUp(AssunzioneServiceTest.java:27)
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class diabetici.dao.AssunzioneDAO]
+	at mcv.model.AssunzioneServiceTest.setUp(AssunzioneServiceTest.java:27)
+Caused by: java.lang.IllegalStateException: 
+
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+	at mcv.model.AssunzioneServiceTest.setUp(AssunzioneServiceTest.java:27)
+Caused by: java.lang.IllegalArgumentException: Java 23 (67) is not supported by the current version of Byte Buddy which officially supports Java 20 (64) - update Byte Buddy or set net.bytebuddy.experimental as a VM property
+	at mcv.model.AssunzioneServiceTest.setUp(AssunzioneServiceTest.java:27)
+
+mcv.model.AssunzioneServiceTest.testGetAssunzioniPerPaziente  Time elapsed: 0.008 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class diabetici.dao.AssunzioneDAO.
+
+If you're not sure why you're getting this error, please open an issue on GitHub.
+
+
+Java               : 23
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 23+37-2369
+JVM name           : Java HotSpot(TM) 64-Bit Server VM
+JVM version        : 23+37-2369
+JVM info           : mixed mode, sharing
+OS name            : Mac OS X
+OS version         : 15.5
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class diabetici.dao.AssunzioneDAO]
+	at mcv.model.AssunzioneServiceTest.setUp(AssunzioneServiceTest.java:27)
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class diabetici.dao.AssunzioneDAO]
+	at mcv.model.AssunzioneServiceTest.setUp(AssunzioneServiceTest.java:27)
+Caused by: java.lang.IllegalStateException: 
+
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+	at mcv.model.AssunzioneServiceTest.setUp(AssunzioneServiceTest.java:27)
+Caused by: java.lang.IllegalArgumentException: Java 23 (67) is not supported by the current version of Byte Buddy which officially supports Java 20 (64) - update Byte Buddy or set net.bytebuddy.experimental as a VM property
+	at mcv.model.AssunzioneServiceTest.setUp(AssunzioneServiceTest.java:27)
+
+mcv.model.AssunzioneServiceTest.testGetAssunzioniInsulinaUltimoMese  Time elapsed: 0.008 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class diabetici.dao.AssunzioneDAO.
+
+If you're not sure why you're getting this error, please open an issue on GitHub.
+
+
+Java               : 23
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 23+37-2369
+JVM name           : Java HotSpot(TM) 64-Bit Server VM
+JVM version        : 23+37-2369
+JVM info           : mixed mode, sharing
+OS name            : Mac OS X
+OS version         : 15.5
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class diabetici.dao.AssunzioneDAO]
+	at mcv.model.AssunzioneServiceTest.setUp(AssunzioneServiceTest.java:27)
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class diabetici.dao.AssunzioneDAO]
+	at mcv.model.AssunzioneServiceTest.setUp(AssunzioneServiceTest.java:27)
+Caused by: java.lang.IllegalStateException: 
+
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+	at mcv.model.AssunzioneServiceTest.setUp(AssunzioneServiceTest.java:27)
+Caused by: java.lang.IllegalArgumentException: Java 23 (67) is not supported by the current version of Byte Buddy which officially supports Java 20 (64) - update Byte Buddy or set net.bytebuddy.experimental as a VM property
+	at mcv.model.AssunzioneServiceTest.setUp(AssunzioneServiceTest.java:27)
+
+mcv.model.AssunzioneServiceTest.testControllaInattivitaAssunzioni_MandaNotificaMedico  Time elapsed: 0.008 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class diabetici.dao.AssunzioneDAO.
+
+If you're not sure why you're getting this error, please open an issue on GitHub.
+
+
+Java               : 23
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 23+37-2369
+JVM name           : Java HotSpot(TM) 64-Bit Server VM
+JVM version        : 23+37-2369
+JVM info           : mixed mode, sharing
+OS name            : Mac OS X
+OS version         : 15.5
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class diabetici.dao.AssunzioneDAO]
+	at mcv.model.AssunzioneServiceTest.setUp(AssunzioneServiceTest.java:27)
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class diabetici.dao.AssunzioneDAO]
+	at mcv.model.AssunzioneServiceTest.setUp(AssunzioneServiceTest.java:27)
+Caused by: java.lang.IllegalStateException: 
+
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+	at mcv.model.AssunzioneServiceTest.setUp(AssunzioneServiceTest.java:27)
+Caused by: java.lang.IllegalArgumentException: Java 23 (67) is not supported by the current version of Byte Buddy which officially supports Java 20 (64) - update Byte Buddy or set net.bytebuddy.experimental as a VM property
+	at mcv.model.AssunzioneServiceTest.setUp(AssunzioneServiceTest.java:27)
+

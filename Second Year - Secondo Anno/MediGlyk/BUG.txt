@@ -1,0 +1,9 @@
+BUG programma:
+1 - Quando avvio devo cliccare sulla pagina per aggiornare ad ogni click
+2 - Nessun controllo per password e cf
+3 - dopo l'autenticazione sia per medico, paziente, segreteria, apre info paziente
+
+TABELLE:
+1 - Medico (nome, cognome, cf "chiave", email, ruolo, password)
+2 - Paziente (id, nome, cognome, cf "chiave", email, ruolo, genere, cf medico "chiave esterna", password)
+3 - Info paziente (fumatore, ex-fumatore, dipendenza alcool, dipendenza stupefacenti, obesità, sedentarietà, patologie pregresse, comorbidità presenti) DA COLLEGARE CON PAZIENTE CF

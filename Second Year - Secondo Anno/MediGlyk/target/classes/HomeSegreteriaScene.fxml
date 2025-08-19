@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: white; -fx-font-family: 'Arial';" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mcv.control.HomeSegreteriaController">
+
+    <!-- Logo -->
+    <top>
+        <VBox spacing="5" style="-fx-padding: 10 10 0 10;">
+            <ImageView fitHeight="74.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@logo.jpeg" />
+                </image>
+            </ImageView>
+            <Separator />
+        </VBox>
+    </top>
+
+    <!-- Parte centrale -->
+    <center>
+        <StackPane fx:id="centerStackPane" maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-padding: 20;">
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="750" spacing="20" style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+
+                <VBox alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" spacing="20" style="-fx-padding: 20; -fx-border-color: #ccc; -fx-border-radius: 5;">
+                    <Label text="Aggiungi Paziente" textFill="#333">
+                        <font><Font name="System Bold" size="18.0" /></font>
+                    </Label>
+
+                    <GridPane hgap="10" style="-fx-padding: 10;" vgap="10">
+                        <Label text="Codice Fiscale:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <TextField fx:id="cfPazienteField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <Label text="Nome:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <TextField fx:id="nomePazienteField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <Label text="Cognome:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <TextField fx:id="cognomePazienteField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <TextField fx:id="emailPazienteField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                        <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                        <TextField fx:id="passwordPazienteField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                        <Label text="Genere(M/F):" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                        <TextField fx:id="generePazienteField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                        <Label text="Ulteriori Info:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                        <TextField fx:id="ulterInfoPazienteField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                        <Label text="Data Nascita:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                        <DatePicker fx:id="dataNascitaPazientePicker" prefHeight="30.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+                        <Label text="Fattori Rischio:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+                        <TextArea fx:id="fattoriRischioField" prefHeight="60.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+                        <ListView fx:id="suggerimentiFattoriRischioListView" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-color: #ccc; -fx-border-radius: 3;                                     -fx-background-insets: 0; -fx-padding: 0;" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                            <GridPane.margin>
+                                <Insets />
+                            </GridPane.margin>
+                        </ListView>
+
+
+                        <Label text="Patologie Pregresse:" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+                        <TextField fx:id="patologiePregresseField" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+
+                        <Label text="Comorbidità:" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+                        <TextField fx:id="comorbiditaField" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+
+                        <Label text="CF Medico Associato:" GridPane.columnIndex="0" GridPane.rowIndex="12" />
+                        <TextField fx:id="cfMedicoAssocField" prefHeight="30.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+
+                        <ListView fx:id="suggerimentiMediciListView" maxHeight="-Infinity" prefHeight="51.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-color: #ccc; -fx-border-radius: 3;                                          -fx-background-insets: 0; -fx-padding: 0; -fx-cell-size: 25px;" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                            <GridPane.margin>
+                                <Insets />
+                            </GridPane.margin>
+                        </ListView>
+
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="NEVER" minWidth="150" />
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="250" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="30" prefHeight="30" />
+                            <RowConstraints minHeight="30" prefHeight="30" />
+                            <RowConstraints minHeight="30" prefHeight="30" />
+                            <RowConstraints minHeight="30" prefHeight="30" />
+                            <RowConstraints minHeight="30" prefHeight="30" />
+                            <RowConstraints minHeight="30" prefHeight="30" />
+                            <RowConstraints minHeight="30" prefHeight="30" />
+                            <RowConstraints minHeight="30" prefHeight="30" />
+                            <RowConstraints minHeight="30" prefHeight="30" />
+                            <RowConstraints maxHeight="-Infinity" minHeight="75.0" prefHeight="75.0" />
+                            <RowConstraints minHeight="30" prefHeight="30" />
+                            <RowConstraints minHeight="30" prefHeight="30" />
+                            <RowConstraints minHeight="30" prefHeight="30" />
+                            <RowConstraints maxHeight="-Infinity" minHeight="51.0" prefHeight="100.0" />
+                        </rowConstraints>
+                    </GridPane>
+
+                    <Button fx:id="aggiungiPazienteBtn" maxHeight="-Infinity" minHeight="-Infinity" onAction="#handleAggiungiPaziente" prefHeight="35.0" prefWidth="448.0" style="-fx-background-color: #4B788F; -fx-text-fill: white;" text="Aggiungi Paziente" />
+                </VBox>
+
+                <VBox prefHeight="600" prefWidth="350" spacing="20">
+
+                    <!-- Area di aggiungi medico -->
+                    <VBox alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="354.0" prefWidth="344.0" spacing="20" style="-fx-padding: 20; -fx-border-color: #ccc; -fx-border-radius: 5;">
+                        <Label text="Aggiungi Medico" textFill="#333">
+                            <font><Font name="System Bold" size="18.0" /></font>
+                        </Label>
+
+                        <GridPane hgap="10" style="-fx-padding: 10;" vgap="10">
+                            <Label text="Codice Fiscale:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                            <TextField fx:id="cfMedicoField" prefHeight="30.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                            <Label text="Nome:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                            <TextField fx:id="nomeMedicoField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                            <Label text="Cognome:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                            <TextField fx:id="cognomeMedicoField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                            <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                            <TextField fx:id="emailMedicoField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                            <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                            <TextField fx:id="passwordMedicoField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="NEVER" minWidth="100" />
+                                <ColumnConstraints hgrow="ALWAYS" minWidth="250" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="30" prefHeight="30" />
+                                <RowConstraints minHeight="30" prefHeight="30" />
+                                <RowConstraints minHeight="30" prefHeight="30" />
+                                <RowConstraints minHeight="30" prefHeight="30" />
+                                <RowConstraints minHeight="30" prefHeight="30" />
+                            </rowConstraints>
+                        </GridPane>
+
+                        <Button fx:id="aggiungiMedicoBtn" onAction="#handleAggiungiMedico" prefHeight="35.0" prefWidth="372.0" style="-fx-background-color: #4B788F; -fx-text-fill: white;" text="Aggiungi Medico" />
+                    </VBox>
+
+                    <!-- Area di gestione utenti -->
+                    <VBox alignment="TOP_LEFT" prefHeight="307.0" prefWidth="422.0" spacing="15" style="-fx-padding: 20; -fx-border-color: #ccc; -fx-border-radius: 5;">
+                        <Label text="Gestione Utenti" textFill="#333">
+                            <font><Font name="System Bold" size="18.0" /></font>
+                        </Label>
+
+                        <Button fx:id="EliminaMedicoButton" onAction="#apriFinestraEliminaMedico" prefHeight="35.0" prefWidth="372.0" style="-fx-background-color: #4B788F; -fx-text-fill: white;" text="Elimina Medico">
+                            <VBox.margin>
+                                <Insets top="17.0" />
+                            </VBox.margin>
+                        </Button>
+
+                        <Button fx:id="EliminaPazienteButton" onAction="#apriFinestraEliminaPaziente" prefHeight="35.0" prefWidth="372.0" style="-fx-background-color: #4B788F; -fx-text-fill: white;" text="Elimina Paziente">
+                            <VBox.margin>
+                                <Insets top="17.0" />
+                            </VBox.margin>
+                        </Button>
+
+                        <Button fx:id="modificaMedicoCuranteBtn" onAction="#apriFinestraModificaMedicoCurante" prefHeight="35.0" prefWidth="372.0" style="-fx-background-color: #4B788F; -fx-text-fill: white;" text="Modifica Medico Curante">
+                            <VBox.margin>
+                                <Insets top="17.0" />
+                            </VBox.margin>
+                        </Button>
+                    </VBox>
+                </VBox>
+            </HBox>
+        </StackPane>
+    </center>
+
+    <!-- Bottone indietro -->
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" style="-fx-padding: 10 20 10 10;">
+            <Button fx:id="indietroButton" mnemonicParsing="false" onAction="#handleBack" style="-fx-background-color: #4B788F; -fx-text-fill: white;" text="Indietro" />
+        </HBox>
+    </bottom>
+
+</BorderPane>

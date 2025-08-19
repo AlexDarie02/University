@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10" style="-fx-padding: 20; -fx-font-family: 'Arial'; -fx-text-fill: black; -fx-effect: none; -fx-background-color:white; " xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mcv.control.EliminaMedicoController">
+
+    <Label text="Inserisci Codice Fiscale del Medico da Eliminare:" />
+    <TextField fx:id="inputTextField" promptText="Codice Fiscale" />
+    <ListView fx:id="suggerimentiListView" maxHeight="100" />
+    <Button fx:id="eliminaButton" prefHeight="25.0" prefWidth="281.0" style="-fx-background-color: #B23B3B; -fx-text-fill: white;" text="Elimina Medico" />
+</VBox>
