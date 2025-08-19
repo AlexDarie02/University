@@ -16,7 +16,7 @@ Con il tempo ho iniziato a migliorare il mio metodo per organizzare e strutturar
 
 # Index/Indice
 <details>
-  <summary>First year (2023/2024)</summary>
+  <summary>First year/Primo Anno (2023/2024)</summary>
 
 
   - Computer Architecture/Architettura degli Elaboratori:
@@ -30,7 +30,7 @@ Con il tempo ho iniziato a migliorare il mio metodo per organizzare e strutturar
 
 
 <details>
-  <summary>Second year (2024/2025)</summary>
+  <summary>Second year/Secondo Anno (2024/2025)</summary>
 
   - Software Engineering/Ing. Del Software:
     <br/>
@@ -46,7 +46,7 @@ Con il tempo ho iniziato a migliorare il mio metodo per organizzare e strutturar
 </details>
 
 <details>
-  <summary>Third year (2025/2026)</summary>
+  <summary>Third year/Terzo Anno (2025/2026)</summary>
 
 
   - _blank_<!--:
