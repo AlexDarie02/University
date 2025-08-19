@@ -1,6 +1,6 @@
 ___Section under development___
 
-# University
+# Welcome/Benvenuti
 I created this repository to organize the projects I worked on during my Bachelor's Degree. <br/>
 Many, if not all, of these projects were collaborative with university colleagues, who are properly credited in each project.  
 
@@ -14,7 +14,7 @@ Quasi tutti sono frutto di collaborazioni con colleghi universitari, che sono se
 
 Con il tempo ho iniziato a migliorare il mio metodo per organizzare e strutturare i progetti, quindi mi scuso se alcuni risultano un po’ disordinati.
 
-# Index
+# Index/Indice
 <details>
   <summary>First year (2023/2024)</summary>
 
