@@ -6,6 +6,13 @@ Many, if not all, of these projects were collaborative with university colleague
 
 Over time, I've started improving my approach to maintaining clarity and structure in project development so I'm sorry in advance if they're messy.
 
+
+
+Ho creato questo repository per raccogliere i progetti a cui ho lavorato durante la laurea triennale. 
+Quasi tutti sono frutto di collaborazioni con colleghi universitari, che sono sempre debitamente citati.
+
+Con il tempo ho iniziato a migliorare il mio metodo per organizzare e strutturare i progetti, quindi mi scuso se alcuni risultano un po’ disordinati.
+
 # Index
 <details>
   <summary>First year (2023/2024)</summary>
