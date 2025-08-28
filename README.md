@@ -34,10 +34,9 @@ Con il tempo ho iniziato a migliorare il mio metodo per organizzare e strutturar
     <br/>
   　- MediGlyk<br/>
     
-  <!-- - Operating Systems/Sistemi Operativi:
+  - Operating Systems/Sistemi Operativi:
     <br/>
-  　- SIS<br/>
-  　- ASM-->
+  　- Server and Client<br/>
 
 
 </details>
